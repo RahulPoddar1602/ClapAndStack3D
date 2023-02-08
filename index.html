@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+
+  <body>
+    <div id="cameraType">
+      <h1>Settings</h1>
+      <h2>Camera Type</h2>
+      <input  type="radio" id="perspectiveC" name="Camera" value="Perspective" checked>
+      <label for="perspectiveC">Perspective Camera(Far objects small , near objects big)</label><br>
+      <input  type="radio" id="orthographicC" name="Camera" value="Orthographic">
+      <label for="orthographicC">Orthographic Camera(everything same)</label><br>
+      <h2>Blocks Height</h2>
+      <input id="height_input" type="range" min="0.1" max="1" step="any" />
+      <p>Blocks Height: <output id="valueHeight">0.5</output></p>
+      <button id="go" onclick="init();hide()">Let's Go</button>
+    </div>
+    <div id="instructions">
+      <div class="content">
+        <p>Stack the blocks on top of each other</p>
+        <p>Clap or press Space when a block is above the stack.</p>
+        <input type="text" name=""  value="" placeholder="Enter Your Name" id="name">
+        <button onclick="startGame();touchStarted()" id="btn1">START</button>
+        <br>
+        <div id="list">
+        </div>
+      </div>
+    </div>
+    <div id="results">
+      <div class="content">
+        <p>You missed the block</p>
+        <p>Score: <span id="scoreResult"></span></p>
+        <button onclick="startGame();touchStarted()">Try Again!</button>
+        <div id="resultRank"></div>
+      </div>
+    </div>
+    <div id="score">0</div>
+    <div id="speed">0</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js" integrity="sha512-jeYvJdyAYkpQCY/omvCYQo89qA5YxDW4JBT7COPsHT2sOAanwxkZRFeP9gc69b5reSDpZIoyCqZQZcWZkbB5Gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js" integrity="sha512-avLcnGxl5mqAX/wIKERdb1gFNkOLHh2W5JNCfJm5OugpEPBz7LNXJJ3BDjjwO00AxEY1MqdNjtEmiYhKC0ld7g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/three.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>

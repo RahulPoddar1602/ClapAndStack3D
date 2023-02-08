@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+body {
+  background-color: yellow;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+#instructions {
+  display: none;
+}
+
+#results,
+body:hover #instructions {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(20, 20, 20, 0.75);
+}
+
+a:visited {
+  color: inherit;
+}
+
+#results {
+  display: none;
+  cursor: default;
+}
+
+#results .content,
+#instructions .content {
+  max-width: 300px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+#score {
+  position: absolute;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  top: 30px;
+  right: 30px;
+}
+#speed {
+  position: absolute;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  top: 30px;
+  left: 30px;
+}
+#list , #resultRank{
+  background-color: aqua;
+  height:35vh;
+  color: black;
+  font-size: 1em;
+  overflow: hidden;
+}
+#cameraType{
+  background-color: red;
+  position: absolute;
+  height:100vh;
+  width: 100%;
+  z-index: 100;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.p5Canvas{
+  display: none;
+}
+#shape{
+  height:50%;
+  width:50%;
+}
+label:hover , #hieght_input:hover{
+  cursor: pointer;
+}
+#go:hover{
+  cursor: pointer;
+  scale:2;
+  transition: 0.5s  ease-in-out;
+}
